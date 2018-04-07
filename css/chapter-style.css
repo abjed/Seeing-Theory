@@ -807,6 +807,7 @@ th, td{
 .col-right {
     width: 60%;
     /*right: 0;*/
+    left: 0;
     top: 0;
     position: absolute;
 }
