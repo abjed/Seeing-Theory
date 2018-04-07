@@ -806,7 +806,7 @@ th, td{
 
 .col-right {
     width: 60%;
-    right: 0;
+    /*right: 0;*/
     top: 0;
     position: absolute;
 }
@@ -860,7 +860,7 @@ th, td{
 
 .visualization-wrapper svg,
 .visualization-wrapper canvas {
-    /*position: absolute;*/
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
