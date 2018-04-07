@@ -44,7 +44,7 @@
     <!-- Tool Tip -->
     <script src="../js/d3.tip.v0.6.3.js"></script>
     <!-- General Chapter -->
-    <script src="../js/chapter.js"></script>
+    <script src="../js/chapter-ar.js"></script>
     <!-- Visualizations -->
     <script src="basic-probability.js"></script>
     <!-- Google Analytics -->
@@ -99,22 +99,34 @@
                     <h3>الأحداث الصُدفيّة - Chance Events</h3>
                     <p>العشوائيّة (randomness) موجُودة حولنا في كُلّ مكان. نظرية الاحتمال هي الإطار الرياضي الذي يسمح لنا بتحليل أحداث الصُدفة بطريقة سليمة منطقيًا. في نظريّة الإحتمال, إحتمال (probability) وقوع حدث ما هُو رقم يشيرُ إلى مدى إحتمال وقوع هذا الحدث. هذا الرقم يكون دائمًا بين 0 و 1 ، حيثُ يُشير 0 إلى الاستحالة ويشير الرقم 1 إلى اليقين من وقوع الحدث.
 </p> 
-                    <p>A classic example of a probabilistic experiment is a fair coin toss, in which the two possible outcomes are heads or tails. In this case, the probability of flipping a head or a tail is 1/2. In an actual series of coin tosses, we may get more or less than exactly 50% heads. But as the number of flips increases, the long-run frequency of heads is bound to get closer and closer to 50%.</p>
+                    <p>المثال الكلاسيكي للتّجربة الاحتماليّة هي تجربة رمي العملة ،<p/>
+
+		<img src="../img/flip_coin.gif">
+
+	<p> حيث تكون النتيجتان المحتملتان هما الرّأس أو الذّيل. في هذه الحالة ، يكون احتمال الحصول على  الرأس أو الذيل بعد تقليب العملة  هو 1/2. عندما نقوم فعليّا  بسلسلة  من تجارب رمي العملة، قد نحصل على رؤوس أكثر أو أقل من 50٪ بالضبط. ولكن مع زيادة عدد التقلُّبات ، فإنّ تردُّد الحصول على الرؤوس على المدى الطويل سوف يقترب شيئا فشيئا من 50٪.
+</p>
+
+<p>يمكنك أن تجرّب ذلك بالتفاعل مع التّالي, حيث H ترمز للرأس و T ترمز للذّيل: </p>
                     <div class="interactive-wrapper">
                         <div id="coinWrapper">
                             <div id="coin"></div>
                             <div id="coinButtons">
-                                <div class="button-1" id="flipOne">Flip the Coin</div>
-                                <div class="button-1" id="flipHundred">Flip 100 times</div>
+                                <div class="button-1" id="flipOne">إرمي العملة</div>
+                                <div class="button-1" id="flipHundred">إرمي العملة 100 مرّة</div>
                             </div>
                         </div>
                     </div>
-                    <p> For an unfair or weighted coin, the two outcomes are not equally likely. You can change the weight or distribution of the coin by dragging the true probability bars (on the right in blue) up or down. If we assign numbers to the outcomes — say, 1 for heads, 0 for tails — then we have created the mathematical object known as a <a href="../probability-distributions/index.html#section1">random variable</a>.</p>
+			
+		    <p>
+بالنّسبة لعملة غير عادلة (مغشوشة) أو مرجحّة لنتيجة ما، لا تكون النّتيجتان متساويتين الحظّ في الوقوع. لتجرّب ذلك بنفسك في المثال التّفاعلي على اليمين, يمكنُك تغيير وزن أو توزيع العُملة عن طريق سحب أشرطة الاحتمالية الحقيقية (على اليمين باللّون الأزرق) لأعلى أو لأسفل.
+ إذا قمنا بتعيين الأرقام إلى النتائج - لنقل ، 1 للرؤوس ، و 0 للذيول - نكون قد أنشأنا الكائن الرياضي المعروف باسم <a href="../probability-distributions/index-ar.html#section1">متغيّر عشوائي.</a>
+ </p>
+
                 </div>
             </div>
             <div id="section2">
                 <div class="unit">
-                    <h3>Expectation</h3>
+                    <h3>التّوقُّع - Expectation</h3>
                     <p>The expectation of a random variable is a number that attempts to capture the center of that random variable's distribution. It can be interpreted as the long-run average of many independent samples from the given distribution. More precisely, it is defined as the probability-weighted sum of all possible values in the random variable's support,</p>
                     <span id="centered">$$\text{E}[X] = \sum_{x \in \mathcal{X}}xP(x)$$</span>
                     <p>Consider the probabilistic experiment of rolling a fair die and watch as the running sample mean converges to the expectation of 3.5.</p>
@@ -200,8 +212,9 @@
     <div class="col-right">
         <div class='language-setting'>
             <select class="languageSetting">
-                <option selected>EN</option>
-                <option data-url="index-cn.html">中文</option>
+                <option selected>AR</option>
+                <option data-url="index.html">EN</option>
+		<option data-url="index-cn.html">中文</option>
             </select>
         </div>
         <div class="nav-section" id="section-0">
