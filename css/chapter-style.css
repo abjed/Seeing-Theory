@@ -842,7 +842,7 @@ th, td{
     margin: 0 auto;
     width: 60%;
     height: 100%;
-
+    background-color: yellow;
     text-align: center;
 
 }
@@ -854,7 +854,7 @@ th, td{
     vertical-align: middle;
     display: inline-block;
     text-align: center;
-
+    background-color: red;
     position: relative;
 }
 
@@ -866,6 +866,7 @@ th, td{
     left: 0;
     right: 0;
     margin: auto;
+    background-color: green;
 }
 
 .visualization-section img {
