@@ -61,6 +61,11 @@
     $('.scroll-down').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000);
 
     });
+	
+	//adding the action to the button
+	$(document).on('click', '#moveLeft', function(){
+	  $.fn.fullpage.moveSlideLeft();
+	});
     </script>
 
 

@@ -128,17 +128,20 @@
                 <div class="unit">
                     <h3>التّوقُّع - Expectation</h3>
                     <p>في علم الإحتمال, توقُّع متغيّر عشوائي، يرمز له بE، هو رقم يحاول التقاط مركز توزيع ذلك المتغيّر العشوائي. يمكن تفسيره على أنه متوسّط المدى الطويل للعديد من العيّنات المستقلّة من التّوزيع المدروس. بتعبير أدق ، يتم تعريفه كمجموع الإحتمالات المرجحّة لجميع القيم الممكنة للمتغيّر العشوائي،</p>
-                    <span id="centered">$$\text{E}[X] = \sum_{x \in \mathcal{X}}xP(x)$$</span>
-                    <p>Consider the probabilistic experiment of rolling a fair die and watch as the running sample mean converges to the expectation of 3.5.</p>
+                    <span dir="ltr" id="centered">$$\text{E}[X] = \sum_{x \in \mathcal{X}}xP(x)$$</span>
+                    <p>ضع في اعتبارك التّجربة الاحتماليّة لتدوير نرد عادل. تفاعل مع هذه التّجربة في الأسفل
+ وشاهد بينما يقترب متوسط العينة إلى التّوقّع 3.5.</p>
+		    <img src="../img/rolling_dice.gif">
                     <div class="interactive-wrapper">
                     <div id="dieWrapper">
                         <div id="die"></div>
                         <div id="dieButtons">
-                            <div class="button-1" id="rollOne">Roll the Die</div>
-                            <div class="button-1" id="rollHundred">Roll 100 times</div>
+                            <div class="button-1" id="rollOne">دوّر النّرد</div>
+                            <div class="button-1" id="rollHundred">دوّر النّرد 100 مرّة</div>
                         </div>
                     </div></div>
-                    <p><span style="font-weight: 600;">Change</span> the distribution of the different faces of the die (thus making the die biased or "unfair") by adjusting the blue bars below and observe how this changes the expectation.</p>
+                    <p>غيّر توزيع أرجحيّة الوُجوه المُختلفة للنّرد (مما يجعل النّرد متحيّزًا أو "غير عادل") من خلال تعديل القضبان الزرقاء أدناه و لاحظ كيف يؤدّي ذلك إلى تغيير التّوقُّع.
+</p>
                     <div id="barDie"></div>
                 </div>
             </div>
