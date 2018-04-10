@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 
 <head>
     <meta charset="utf-8">
@@ -18,13 +18,13 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <title>Seeing Theory</title>
+    <title>إلمس و تفاعل مع النظريات</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700" rel="stylesheet">
 
-   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
 
     <!-- Home Page CSS -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -61,6 +61,11 @@
     $('.scroll-down').fadeIn(1000).fadeOut(1000).fadeIn(1000).fadeOut(1000).fadeIn(1000);
 
     });
+	
+	//adding the action to the button
+	$(document).on('click', '#moveLeft', function(){
+	  $.fn.fullpage.moveSlideLeft();
+	});
     </script>
 
 
@@ -76,15 +81,15 @@
     <div class="menu-bottom">
 
         <ul id="menu">
-            <li data-menuanchor="firstPage" class="active" id='home'><a href="#firstPage">Home</a></li>
-            <li data-menuanchor="secondPage" id="chapter-menu"><a href="#secondPage">Chapters</a></li>
-            <li data-menuanchor="3rdPage"><a href="#3rdPage">About</a> </li>
-            <li data-menuanchor="4thPage"><a href="#4thPage">Book</a> </li>
+            <li data-menuanchor="firstPage" class="active" id='home'><a href="#firstPage">الرئيسية</a></li>
+            <li data-menuanchor="secondPage" id="chapter-menu"><a href="#secondPage">الفصول</a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage">حول</a> </li>
+            <li data-menuanchor="4thPage"><a href="#4thPage">الكتاب</a> </li>
             <li id="language-menu" style="margin-right: 0;">
                 <div class='language-setting'>
             <select id="languageSetting">
-                <option selected>EN</option>
-                <option data-url="index-ar.html">AR</option>
+                <option selected>ar</option>
+                <option>---</option>
             </select>
         </div></li>
 
@@ -96,10 +101,10 @@
             <div class="section-wrapper">
                 <div class="intro">
                     <h1>Seeing Theory</h1>
-                    <p >A visual introduction to probability and statistics.</p>
+                    <p >تمهيد بصري لعلوم الإحتمالات و الإحصاء</p>
                   
-                    <a href="./basic-probability/index.html">
-                        <div class='rec_button'>Start</div>
+                    <a href="./basic-probability/index-ar.html">
+                        <div class='rec_button'>إبدأ</div>
                     </a>
 
 
@@ -110,25 +115,25 @@
         <div class="section" id="section1">
             <div class="chapter-submenu">
                 <ul class="menu-sub">
-                    <li class="active" id='submenu-bp'><a href="#secondPage/chapter1">Basic Probability</a></li>
-                    <li id='submenu-cp'><a href="#secondPage/chapter2">Compound Probability</a></li>
-                    <li id='submenu-pd'><a href="#secondPage/chapter3">Probability Distributions</a> </li>
-                    <li id='submenu-fi'><a href="#secondPage/chapter4">Frequentist Inference</a> </li>
-                    <li id='submenu-bi'><a href="#secondPage/chapter5">Bayesian Inference</a> </li>
-                    <li id='submenu-ra'><a href="#secondPage/chapter6">Regression Analysis</a> </li>
+                    <li class="active" id='submenu-bp'><a href="#secondPage/chapter1">أسس علم الإحتمالات</a></li>
+                    <li id='submenu-cp'><a href="#secondPage/chapter2">الاحتمال المركب</a></li>
+                    <li id='submenu-pd'><a href="#secondPage/chapter3">التوزيعات الاحتماليّة</a> </li>
+                    <li id='submenu-fi'><a href="#secondPage/chapter4">الاستدلال بالتكرّر</a> </li>
+                    <li id='submenu-bi'><a href="#secondPage/chapter5">الاستدلال البايّزي</a> </li>
+                    <li id='submenu-ra'><a href="#secondPage/chapter6">تحليل الانحدار</a> </li>
                 </ul>
             </div>
             <div class='slide-section-wrapper'>
                 <div class="slide" id="chapter1" data-anchor="chapter1">
                     <div class="chapter-nav">
-                        <div class="left">
-                            <h4>Chapter 1</h4>
-                            <h1>Basic Probability</h1>
-                            <p>This chapter is an introduction to the basic concepts of probability theory.</p>
+                        <div class="left" style="text-align: right">
+                            <h4> الفصل 1</h4>
+                            <h1>أسس علم الإحتمالات</h1>
+                            <p>يمهّد هذا الفصل إلي المفاهيم الأساسية لنظريّة الإحتمالات</p>
                             </br>
                             </br>
-                            <a href="./basic-probability/index.html">
-                                <div id="bp" class='rec_button'>Go to Basic Probability</div>
+                            <a href="./basic-probability/index-ar.html">
+                                <div id="bp" class='rec_button'>إضغط للذّهاب لفصل أسس علم الإحتمالات</div>
                             </a>
                         </div>
                         <div class="right">
@@ -136,19 +141,19 @@
                                 <a href="./basic-probability/index.html#section1">
                                     <div class="nav-unit-wrapper-s tile1">
                                         <img src="img/tiles/1-1.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Chance Events </span>
+                                        <span class="nav-unit-title-s"> (Chance Events) الأحداث الصُدفيّة </span>
                                     </div>
                                 </a>
                                 <a href="./basic-probability/index.html#section2">
                                     <div class="nav-unit-wrapper-s tile2">
                                         <img src="img/tiles/1-2.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Expectation </span>
+                                        <span class="nav-unit-title-s"> (Expectation) التّوقٌّع </span>
                                     </div>
                                 </a>
                                 <a href="./basic-probability/index.html#section3">
                                     <div class="nav-unit-wrapper-s tile3">
                                         <img src="img/tiles/1-3.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Variance </span>
+                                        <span class="nav-unit-title-s"> (Variance) التَّابيُن</span>
                                     </div>
                                 </a>
                             </div>
@@ -157,14 +162,14 @@
                 </div>
                 <div class="slide" id="chapter2" data-anchor="chapter2">
                     <div class="chapter-nav">
-                        <div class="left">
-                            <h4>Chapter 2</h4>
-                            <h1>Compound Probability</h1>
-                            <p>This chapter discusses further concepts that lie at the core of probability theory.</p>
+                        <div class="left" style="text-align: right">
+                            <h4>الفصل 2</h4>
+                            <h1>الاحتمال المركب</h1>
+                            <p>الإحتمال المركّب (conditional probability): يناقش هذا الفصل المزيد من المفاهيم الجوهريّة لنظريّة الاحتمالات.</p>
                             </br>
                             </br>
-                            <a href="./compound-probability/index.html">
-                                <div id="cp" class='rec_button'>Go to Compound Probability</div>
+                            <a href="./compound-probability/index-ar.html">
+                                <div id="cp" class='rec_button'>إضغط للذّهاب لفصل الإحتمال المركّب</div>
                             </a>
                         </div>
                         <div class="right">
@@ -172,19 +177,19 @@
                                 <a href="./compound-probability/index.html#section1">
                                     <div class="nav-unit-wrapper-s tile1">
                                         <img src="img/tiles/2-1.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Set Theory </span>
+                                        <span class="nav-unit-title-s">(Set Theory) نظريّة المجموعات</span>
                                     </div>
                                 </a>
                                 <a href="./compound-probability/index.html#section2">
                                     <div class="nav-unit-wrapper-s tile2">
                                         <img src="img/tiles/2-2.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Counting </span>
+                                        <span class="nav-unit-title-s">(Counting) العدّ</span>
                                     </div>
                                 </a>
                                 <a href="./compound-probability/index.html#section3">
                                     <div class="nav-unit-wrapper-s tile3">
                                         <img src="img/tiles/2-3.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Conditional Probability </span>
+                                        <span class="nav-unit-title-s">(conditional probability) الإحتمال الشرطي</span>
                                     </div>
                                 </a>
                             </div>
@@ -193,14 +198,14 @@
                 </div>
                 <div class="slide " id="chapter3" data-anchor="chapter3">
                     <div class="chapter-nav">
-                        <div class="left">
-                            <h4>Chapter 3</h4>
-                            <h1>Probability Distributions</h1>
-                            <p>A probability distribution specifies the relative likelihoods of all possible outcomes.</p>
+                        <div class="left" style="text-align: right">
+                            <h4>الفصل 3</h4>
+                            <h1>التّوزيعات الاحتماليّة</h1>
+                            <p>التوزيعة الإحتماليّة (probability distribution): تحدّد الإحتمال النّسبي لكلّ نتيجة من مجموع النتائج المحتملة من تجربة ما.</p>
                             </br>
                             </br>
-                            <a href="./probability-distributions/index.html">
-                                <div id="pd" class='rec_button'>Go to Probability Distributions</div>
+                            <a href="./probability-distributions/index-ar.html">
+                                <div id="pd" class='rec_button'>إضغط للذّهاب لفصل التّوزيعات الإحتماليّة</div>
                             </a>
                         </div>
                         <div class="right">
@@ -208,19 +213,19 @@
                                 <a href="./probability-distributions/index.html#section1">
                                     <div class="nav-unit-wrapper-s tile1">
                                         <img src="img/tiles/3-1.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Random Variables </span>
+                                        <span class="nav-unit-title-s"> (Random Variables) المُتغيّرات العشوائيّة</span>
                                     </div>
                                 </a>
                                 <a href="./probability-distributions/index.html#section2">
                                     <div class="nav-unit-wrapper-s tile2">
                                         <img src="img/tiles/3-2.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Discrete and Continuous </span>
+                                        <span class="nav-unit-title-s"> (Discrete and Continuous) المُتقطّع و المُتواصل</span>
                                     </div>
                                 </a>
                                 <a href="./probability-distributions/index.html#section3">
                                     <div class="nav-unit-wrapper-s tile3">
                                         <img src="img/tiles/3-3.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Central Limit Theorem </span>
+                                        <span class="nav-unit-title-s"> (Central Limit Theorem) نَظريّة الحدّ المركزي</span>
                                     </div>
                                 </a>
                             </div>
@@ -229,14 +234,14 @@
                 </div>
                 <div class="slide" id="chapter4" data-anchor="chapter4">
                     <div class="chapter-nav">
-                        <div class="left">
-                            <h4>Chapter 4</h4>
-                            <h1>Frequentist Inference</h1>
-                            <p>Frequentist inference is the process of determining properties of an underlying distribution via the observation of data.</p>
+                        <div class="left" style="text-align: right">
+                            <h4>الفصل 4</h4>
+                            <h1>الإستدلال بالتكرّر</h1>
+                            <p>الإستدلال بالتكرّر(frequentist inference) هو عمليّة تحديد خصائص التّوزيع الضمنيّة (underlying distribution), لتجربة ما, عبر مراقبة البيانات.</p>
                             </br>
                             </br>
-                            <a href="./frequentist-inference/index.html">
-                                <div id="fi" class='rec_button'>Go to Frequentist Inference</div>
+                            <a href="./frequentist-inference/index-ar.html">
+                                <div id="fi" class='rec_button'>إضغط للذّهاب لفصل الإستدلال بالتكرّر</div>
                             </a>
                         </div>
                         <div class="right">
@@ -265,14 +270,15 @@
                 </div>
                 <div class="slide" id="chapter5" data-anchor="chapter5">
                     <div class="chapter-nav">
-                        <div class="left">
-                            <h4>Chapter 5</h4>
-                            <h1>Bayesian Inference</h1>
-                            <p>Bayesian inference techniques specify how one should update one’s beliefs upon observing data.</p>
+                        <div class="left" style="text-align: right">
+                            <h4>الفصل 5</h4>
+                            <h1>الإستدلال البايّزي</h1>
+                            <p>تُحدد أساليب الإستدلال البايّزي كيفية تحديث المعتقدات, عن تجربة ما, عند مراقبة البيانات.</p>
+
                             </br>
                             </br>
                             <a href="./bayesian-inference/index.html">
-                                <div id="bi" class='rec_button'>Go to Bayesian Inference</div>
+                                <div id="bi" class='rec_button'>إضغط للذّهاب لفصل الإستدلال البايّزي</div>
                             </a>
                         </div>
                         <div class="right">
@@ -301,14 +307,14 @@
                 </div>
                 <div class="slide" id="chapter6" data-anchor="chapter6">
                     <div class="chapter-nav">
-                        <div class="left">
-                            <h4>Chapter 6</h4>
-                            <h1>Regression Analysis</h1>
-                            <p>Regression Analysis is an approach for modeling the linear relationship between two variables.</p>
+                        <div class="left" style="text-align: right">
+                            <h4>الفصل 6</h4>
+                            <h1>تحليل الانحدار</h1>
+                            <p>تحليل الانحدار (regression analysis) هو نهج لنمذجة العلاقة الخطية بين متغيّرين.</p>
                             </br>
                             </br>
                             <a href="./regression-analysis/index.html">
-                                <div id="ra" class='rec_button'>Go to Regression Analysis</div>
+                                <div id="ra" class='rec_button'>إضغط للذّهاب لفصل تحليل الانحدار</div>
                             </a>
                         </div>
                         <div class="right">
@@ -316,19 +322,19 @@
                                 <a href="./regression-analysis/index.html#section1">
                                     <div class="nav-unit-wrapper-s tile1">
                                         <img src="img/tiles/6-1.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Ordinary Least Square </span>
+                                        <span class="nav-unit-title-s"> (Ordinary Least Square) المُربّعات الصُّغرى العاديّة </span>
                                     </div>
                                 </a>
                                 <a href="./regression-analysis/index.html#section2">
                                     <div class="nav-unit-wrapper-s tile2">
                                         <img src="img/tiles/6-2.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Correlation </span>
+                                        <span class="nav-unit-title-s"> (Correlation) الإرتباط </span>
                                     </div>
                                 </a>
                                 <a href="./regression-analysis/index.html#section3">
                                     <div class="nav-unit-wrapper-s tile3">
                                         <img src="img/tiles/6-3.png" class="nav-unit-tile-s">
-                                        <span class="nav-unit-title-s"> Analysis of Variance </span>
+                                        <span class="nav-unit-title-s"> (Analysis of Variance) تحليل التّبايُن </span>
                                     </div>
                                 </a>                            
                             </div>
@@ -346,7 +352,7 @@
                     </P>
                 
                     </br>
-                    <p>The Team</p>
+                    <p>الفريق</p>
 
                     <div class="team">
                         <a href="http://daniel-kunin.com/">

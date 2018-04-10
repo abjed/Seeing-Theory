@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 
 <head>
     <meta charset="utf-8">
@@ -17,8 +17,7 @@
     <meta property="og:image:height" content="630" />
 
 
-
-    <title>Seeing Theory - Basic Probability</title>
+    <title>Seeing Theory - أسس علم الإحتمالات</title>
     <!-- CSS Imports -->
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Assistant:300,400,600,700" rel="stylesheet">
@@ -28,6 +27,8 @@
     <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
     <!-- General Chapter -->
     <link rel="stylesheet" type="text/css" href="../css/chapter-style.css">
+    <!-- Specific Chapter for arabic -->
+    <link rel="stylesheet" type="text/css" href="../css/chapter-style-ar.css">
     <!-- Specific Chapter -->
     <link rel="stylesheet" type="text/css" href="basic-probability.css">
     <!-- JavaScript Imports -->
@@ -43,7 +44,7 @@
     <!-- Tool Tip -->
     <script src="../js/d3.tip.v0.6.3.js"></script>
     <!-- General Chapter -->
-    <script src="../js/chapter.js"></script>
+    <script src="../js/chapter-ar.js"></script>
     <!-- Visualizations -->
     <script src="basic-probability.js"></script>
     <!-- Google Analytics -->
@@ -78,7 +79,7 @@
                     <span onclick="openNav()" id="hamburger">&#9776; </span>
                 </li>
                 <li><a href="../index.html" id="seeing-theory">Seeing Theory</a></li>
-                <li><a onclick='toTop()' id='display-chapter'>Chapter 1: Basic Probability</a></li>
+                <li><a onclick='toTop()' id='display-chapter'>الفصل 1: أسس علم الإحتمالات</a></li>
             </ul>
         </div>
     </div>
@@ -86,64 +87,83 @@
         <div class="col-left-wrapper">
             <div id="section0">
                 <div class="chapter-intro">
-                    <h4>Chapter 1</h4>
-                    <h1>Basic Probability</h1>
-                    <p>This chapter is an introduction to the basic concepts of probability theory.
-                    </p>
+                    <h4>الفصل 1</h4>
+                    <h1>أسس علم الإحتمالات</h1>
+                    <p>يمهّد هذا الفصل إلي المفاهيم الأساسية لنظريّة الإحتمالات
+         	    </p>
                 </div>
                 <div class="scroll-down"> <img src="../img/bottom-arrow.svg"></div>
             </div>
             <div id="section1">
                 <div class="unit">
-                    <h3>Chance Events</h3>
-                    <p>Randomness is all around us. Probability theory is the mathematical framework that allows us to analyze chance events in a logically sound manner. The probability of an event is a number indicating how likely that event will occur. This number is always between 0 and 1, where 0 indicates impossibility and 1 indicates certainty.</p> 
-                    <p>A classic example of a probabilistic experiment is a fair coin toss, in which the two possible outcomes are heads or tails. In this case, the probability of flipping a head or a tail is 1/2. In an actual series of coin tosses, we may get more or less than exactly 50% heads. But as the number of flips increases, the long-run frequency of heads is bound to get closer and closer to 50%.</p>
+                    <h3>الأحداث الصُدفيّة - Chance Events</h3>
+                    <p>العشوائيّة (randomness) موجُودة حولنا في كُلّ مكان. نظرية الاحتمال هي الإطار الرياضي الذي يسمح لنا بتحليل أحداث الصُدفة بطريقة سليمة منطقيًا. في نظريّة الإحتمال, إحتمال (probability) وقوع حدث ما هُو رقم يشيرُ إلى مدى إحتمال وقوع هذا الحدث. هذا الرقم يكون دائمًا بين 0 و 1 ، حيثُ يُشير 0 إلى الاستحالة ويشير الرقم 1 إلى اليقين من وقوع الحدث.
+</p> 
+                    <p>المثال الكلاسيكي للتّجربة الاحتماليّة هي تجربة رمي العملة ،<p/>
+
+		<img src="../img/flip_coin.gif">
+
+	<p> حيث تكون النتيجتان المحتملتان هما الرّأس أو الذّيل. في هذه الحالة ، يكون احتمال الحصول على  الرأس أو الذيل بعد تقليب العملة  هو 1/2. عندما نقوم فعليّا  بسلسلة  من تجارب رمي العملة، قد نحصل على رؤوس أكثر أو أقل من 50٪ بالضبط. ولكن مع زيادة عدد التقلُّبات ، فإنّ تردُّد الحصول على الرؤوس على المدى الطويل سوف يقترب شيئا فشيئا من 50٪.
+</p>
+
+<p>يمكنك أن تجرّب ذلك بالتفاعل مع التّالي, حيث يرمز H  للرأس و T للذّيل:</p>
                     <div class="interactive-wrapper">
                         <div id="coinWrapper">
                             <div id="coin"></div>
                             <div id="coinButtons">
-                                <div class="button-1" id="flipOne">Flip the Coin</div>
-                                <div class="button-1" id="flipHundred">Flip 100 times</div>
+                                <div class="button-1" id="flipOne">إرمي العملة</div>
+                                <div class="button-1" id="flipHundred">إرمي العملة 100 مرّة</div>
                             </div>
                         </div>
                     </div>
-                    <p> For an unfair or weighted coin, the two outcomes are not equally likely. You can change the weight or distribution of the coin by dragging the true probability bars (on the right in blue) up or down. If we assign numbers to the outcomes — say, 1 for heads, 0 for tails — then we have created the mathematical object known as a <a href="../probability-distributions/index.html#section1">random variable</a>.</p>
+			
+		    <p>
+بالنّسبة لعملة غير عادلة (مغشوشة) أو مرجحّة لنتيجة ما، لا تكون النّتيجتان متساويتين الحظّ في الوقوع. لتجرّب ذلك بنفسك في المثال التّفاعلي على اليمين, يمكنُك تغيير وزن أو توزيع العُملة عن طريق سحب أشرطة الاحتمالية الحقيقية (على اليمين باللّون الأزرق) لأعلى أو لأسفل.
+ إذا قمنا بتعيين الأرقام إلى النتائج - لنقل ، 1 للرؤوس ، و 0 للذيول - نكون قد أنشأنا الكائن الرياضي المعروف باسم <a href="../probability-distributions/index-ar.html#section1">متغيّر عشوائي.</a>
+ </p>
+
                 </div>
             </div>
             <div id="section2">
                 <div class="unit">
-                    <h3>Expectation</h3>
-                    <p>The expectation of a random variable is a number that attempts to capture the center of that random variable's distribution. It can be interpreted as the long-run average of many independent samples from the given distribution. More precisely, it is defined as the probability-weighted sum of all possible values in the random variable's support,</p>
-                    <span id="centered">$$\text{E}[X] = \sum_{x \in \mathcal{X}}xP(x)$$</span>
-                    <p>Consider the probabilistic experiment of rolling a fair die and watch as the running sample mean converges to the expectation of 3.5.</p>
+                    <h3>التّوقُّع - Expectation</h3>
+                    <p>في علم الإحتمال, توقُّع متغيّر عشوائي، يرمز له بE، هو رقم يحاول التقاط مركز توزيع ذلك المتغيّر العشوائي. يمكن تفسيره على أنه متوسّط المدى الطويل للعديد من العيّنات المستقلّة من التّوزيع المدروس. بتعبير أدق ، يتم تعريفه كمجموع الإحتمالات المرجحّة لجميع القيم الممكنة للمتغيّر العشوائي،</p>
+                    <span dir="ltr" id="centered">$$\text{E}[X] = \sum_{x \in \mathcal{X}}xP(x)$$</span>
+                    <p>ضع في اعتبارك التّجربة الاحتماليّة لتدوير نرد عادل. تفاعل مع هذه التّجربة في الأسفل
+ وشاهد بينما يقترب متوسط العينة إلى التّوقّع 3.5.</p>
+		    <img src="../img/rolling_dice.gif">
                     <div class="interactive-wrapper">
                     <div id="dieWrapper">
                         <div id="die"></div>
                         <div id="dieButtons">
-                            <div class="button-1" id="rollOne">Roll the Die</div>
-                            <div class="button-1" id="rollHundred">Roll 100 times</div>
+                            <div class="button-1" id="rollOne">دوّر النّرد</div>
+                            <div class="button-1" id="rollHundred">دوّر النّرد 100 مرّة</div>
                         </div>
                     </div></div>
-                    <p><span style="font-weight: 600;">Change</span> the distribution of the different faces of the die (thus making the die biased or "unfair") by adjusting the blue bars below and observe how this changes the expectation.</p>
+                    <p>غيّر توزيع أرجحيّة الوُجوه المُختلفة للنّرد (مما يجعل النّرد متحيّزًا أو "غير عادل") من خلال تعديل القضبان الزرقاء أدناه و لاحظ كيف يؤدّي ذلك إلى تغيير التّوقُّع.
+</p>
                     <div id="barDie"></div>
                 </div>
             </div>
             <div id="section3">
                 <div class="unit">
-                    <h3>Variance</h3>
-                    <p>Whereas expectation provides a measure of centrality, the variance of a random variable quantifies the spread of that random variable's distribution. The variance is the average value of the squared difference between the random variable and its expectation,</p>
+                    <h3>التّبايُن - Variance</h3>
+                    <p>في حين أنّ التّوقُّع (expectation) يوفّر قياسًا للقيمة المركزية(centrality) لتوزيع ما ، فإنّ قيمة تبايُن (variance) متغير عشوائي (random variable) تُحدّدُ مدى إنتشار توزيع المتغيّر العشوائي هذا. يمكن أيضا فهم التّباين على أنه متوسّط قيمة الفرق المربع (squared difference) بين المتغيّر العشوائي وتوقُّعه،
+</p>
                     <span id="left-mathjax">$$\text{Var}(X) = \text{E}[(X - \text{E}[X])^2]$$</span>
-                    <p>Draw cards randomly from a deck of ten cards. As you continue drawing cards, observe that the running average of squared differences (in green) begins to resemble the true variance (in blue).</p>
+
+                    <p>فلنأخذ مثالا حتّى نفهم التّابين - variance - بشكل أفضل. لنفترض أنّ لديك مجموعةً من أوراق اللّعب - a deck of cards - تتكوّن من 10 أوراق. إختر عشوائيا ورقة في كل دور. كُلّما تقدّمت في إختيار الأوراق, ستُلاحظ أنّ معدّل التّحرك  - running average - للفروق المربّعة - squared differences- (بالأخضر) يقترب شيئا فشيئا من القيمة الحقيقة للتّباين (بالأزرق).</p>
+                    <p> يمكّنك أن تتفاعل بنفسك مع التجربة :</p>
                     <div class="interactive-wrapper">
                         <div id="cardWrapper">
                             <div id="card"></div>
                             <div id="cardButtons">
-                                <div class="button-1" id="drawOne">Draw a Card</div>
-                                <div class="button-1" id="drawHundred">Draw 100 times</div>
+                                <div class="button-1" id="drawOne">إختر ورقة</div>
+                                <div class="button-1" id="drawHundred">إختر 100 ورقة</div>
                             </div>
                         </div>
                     </div>
-                    <p>Toggle which cards you want to include in the deck by clicking on them below.</p>
+                    <p>إضغط على أيّ روقة من المجموعة التّالية لإخراجها من مجموعة الأوراق ثم تفاعل مجددا مع التجربة السّابقة. </p>
                      <div class="interactive-wrapper">
                      </br>
                     <input type="checkbox" class="deck" id="card_one" value="1">
@@ -178,7 +198,7 @@
                 </a>
                 <a id="share-button" >
 
-                    <li><i class="fa fa-share-square-o action-icon" aria-hidden="true"></i>Share</li>
+                    <li><i class="fa fa-share-square-o action-icon" aria-hidden="true"></i>شارك</li>
                     <li><div id="share"></div></li>
                     <li><div id="share-modal"></div></li>
 
@@ -186,11 +206,11 @@
 
             </ul>
         </div>
-        <a href="../compound-probability/index.html">
+        <a href="../compound-probability/index-ar.html">
             <div class="chapter-footer" id="next-chapter-color">
                 <div class="chapter-footer-wrapper">
-                    <h4>Next</h4>
-                    <p id='next-chapter'>Compound Probability → </p>
+                    <h4>التّالي</h4>
+                    <p id='next-chapter'>الإحتمالات المركّبة → </p>
                 </div>
             </div>
         </a>
@@ -198,23 +218,23 @@
     <div class="col-right">
         <div class='language-setting'>
             <select class="languageSetting">
-                <option selected>EN</option>
-                <option data-url="index-ar.html">AR</option>
-                <option data-url="index-cn.html">中文</option>
+                <option selected>AR</option>
+                <option data-url="index.html">EN</option>
+		<option data-url="index-cn.html">中文</option>
             </select>
         </div>
         <div class="nav-section" id="section-0">
             <div class="nav-unit-wrapper" id='one'>
                 <img src="../img/tiles/1-1.png">
-                <span class="nav-unit-title"> Chance Events </span>
+                <span class="nav-unit-title"> أحداث الصُّدفة </span>
             </div>
             <div class="nav-unit-wrapper" id='two'>
                 <img src="../img/tiles/1-2.png">
-                <span class="nav-unit-title"> Expectation </span>
+                <span class="nav-unit-title"> التّوقُّع </span>
             </div>
             <div class="nav-unit-wrapper" id='three'>
                 <img src="../img/tiles/1-3.png">
-                <span class="nav-unit-title"> Variance </span>
+                <span class="nav-unit-title"> التّباين </span>
             </div>
         </div>
         <div class="visualization-section" id="section-1">
