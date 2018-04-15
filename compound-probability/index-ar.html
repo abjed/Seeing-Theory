@@ -127,16 +127,16 @@
                     <h3>العدّ</h3>
                     <p>يمكن أن يكون حساب عدد التّسلسلات أو المجموعات التّي تلبّي شروطا معينّة صعبا. على سبيل المثال ، لنعتبر أن لدينا كيسًا من الكراة الزجاجيّة حيث كُلّ كرة منها بلون مختلف. إذا قمنا بإستخراج كرة واحدة في كل مرة من الكيس بدون استبدال (أي دون أن نعيد الكرة التّي أخرجناها إلي الكيس) ، كم عدد التّسلسلات المرتّبة (تسمّى التّباديل- permutation) للرُّخام يمكننا إستخراجه من الكيس؟ كم عدد المجموعات الغير مُرتّبة المُختلفة  (تسمّى أيضا التّراكيب - combinations) المُمكن إستخراجها؟</p>
                     <div class="interactive-wrapper">
-                        <label class="radio-inline">Permutation
+                        <label class="radio-inline">التّبديل
                             <input type="radio" name="radioComb" checked="checked" value=false>
                             <span class="checkmark"></span>
                         </label>
-                        <label class="radio-inline">Combination
+                        <label class="radio-inline">التّركيب
                             <input type="radio" name="radioComb" value=true>
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <p> Choose how many marbles the bag should contain.</p>
+                    <p>إختر عدد الكرات التّي يجب أن يحتويها الكيس.</p>
                     <div class="interactive-wrapper">
                         <div id="sizeComb">
                         		<img class="button-1" src="../img/marble1.svg">
@@ -145,7 +145,7 @@
                         		<img class="button-1 active" src="../img/marble4.svg">
                         </div>
                     </div>
-                    <p> Click on the table below to visualize all possible permutations or combinations of the marbles.</p>
+                    <p>أنقر على الجدول أدناه لتصوّر كُلّ التّباديل أو التّراكيب المُمكن إستخراجها من كيس الكراة الزجاجيّة.</p>
                                      
                     <table id="count_table" style="cursor:pointer" class="table table-bordered">
                             <colgroup></colgroup>
@@ -180,9 +180,12 @@
             </div>
             <div id="section3">
                 <div class="unit">
-                    <h3>Conditional Probability</h3>
-                    <p>Conditional probabilities allow us to account for information we have about our system of interest. For example, we might expect the probability that it will rain tomorrow (in general) to be smaller than the probability it will rain tomorrow <em>given that it is cloudy today</em>. This latter probability is a conditional probability, since it accounts for relevant information that we possess.</p>
-                    <p>Mathematically, computing a conditional probability amounts to shrinking our sample space to a particular event. So in our rain example, instead of looking at how often it rains on any day in general, we "pretend" that our sample space consists of only those days for which the previous day was cloudy. We then determine how many of those days were rainy. This shrinking of the sample space can be visualized by clicking on the tabs below.</p>
+                    <h3> الإحتمال الشرطي - Conditional Probability</h3>
+                    <p>يسمح لنا الإحتمال المشروط بإعتبار المعلومات الإضافيّة التّي لدينا عند حساب إحتمال وقوع حدث ما. على سبيل المثال، قد نتوقّع أنّ إحتمال أن يتساقط المطر غداً (بشكل عام) أصغر من إحتمال أن تمطر غداً <em> بإعتبار أنّ الطقس غائم اليوم </em>. هذا الاحتمال الأخير هو إحتمال مشروط ، لأنّه يمثّل المعلومات الإضافية التي نمتلكها ( و هي أنّ الطقس غائم اليوم) ذات الصلة بالحدث الذي نرغب بحساب إحتمال وقوعه (و هو سقوط المطر غدا).</p>
+                    <p>رياضيا ، حساب الاحتمال الشرطي يساوي تقليص مساحة العيّنة لدينا إلى الأمثلة حيث حدوث الشرط صحيح. في المثال السّابق عن سقوط المطر ، بدلاً من النّظر إلى عدد المرّات التّي تمطر فيها في العموم ، فإنّنا "نتظاهر" بأن مساحة العيّنة لدينا تتكون فقط من تلك الأيّام التّي كان يومُها السّابق غائما. ثم نحدد عدد الأيام الممطرة من هذه الأيّام المتبقيّة.
+<br> 
+يمكن تصوّرُ تقلُّص مساحة العيّنة بالنقر فوق علامات التبويب (A, B, C) أدناه.
+</p>
                     <div class="interactive-wrapper">
                         <div id="perspectiveControl">
                             </br>
@@ -193,7 +196,9 @@
                         </div>
                         <div dir="ltr" id='svgProbCP'></div>
                     </div>
-                    <p>This visualization was adapted from Victor Powell's fantastic visualization of <a href="http://setosa.io/conditional/">conditional probability</a>.</p>
+                    <p> تمّ تعديل التصوّر على اليسار من العمل الرائع الذّي قام به Victor Powell عن
+
+ <a href="http://setosa.io/conditional/">الإحتمالات المركّبة</a>.</p>
                     <!-- <div id="ballControl">
                         <div class="button-1 ballBtns" id="start" style="display:none">Start Ball Drop</div>
                         <div class="button-1 ballBtns" id="stop">Stop Ball Drop</div>
@@ -204,11 +209,11 @@
         <div class="action-buttons">
             <ul>
                 <a href="../doc/compound-probability.pdf">
-                    <li><i class="fa fa-file-text-o action-icon" aria-hidden="true"></i> <span>Download</span></li>
+                    <li><i class="fa fa-file-text-o action-icon" aria-hidden="true"></i> <span>حمّل الكتاب</span></li>
                 </a>
                  <a id="share-button" >
 
-                    <li><i class="fa fa-share-square-o action-icon" aria-hidden="true"></i>Share</li>
+                    <li><i class="fa fa-share-square-o action-icon" aria-hidden="true"></i>شارك</li>
                     <li><div id="share"></div></li>
                     <li><div id="share-modal"></div></li>
 
@@ -218,8 +223,8 @@
         <a href="../probability-distributions/index.html">
             <div class="chapter-footer" id="next-chapter-color">
                 <div class="chapter-footer-wrapper">
-                    <h4>Next</h4>
-                    <p id='next-chapter'>Probability Distribution → </p>
+                    <h4>التّالي</h4>
+                    <p id='next-chapter'>توزيع الإحتمال → </p>
                 </div>
             </div>
         </a>
@@ -227,22 +232,23 @@
     <div class="col-right">
         <div class='language-setting'>
             <select class="languageSetting">
-                <option selected>EN</option>
-                <option data-url="index-cn.html">中文</option>
+                <option selected>AR</option>
+                <option data-url="index.html">EN</option>
+		<option data-url="index-cn.html">中文</option>
             </select>
         </div>
         <div class="nav-section" id="section-0">
             <div class="nav-unit-wrapper" id='one'>
                 <img src="../img/tiles/2-1.png">
-                <span class="nav-unit-title"> Set Theory </span>
+                <span class="nav-unit-title">نظريّة المجموعات</span>
             </div>
             <div class="nav-unit-wrapper" id='two'>
                 <img src="../img/tiles/2-2.png">
-                <span class="nav-unit-title"> Counting </span>
+                <span class="nav-unit-title"> العدّ </span>
             </div>
             <div class="nav-unit-wrapper" id='three'>
                 <img src="../img/tiles/2-3.png">
-                <span class="nav-unit-title"> Conditional Probability </span>
+                <span class="nav-unit-title"> الإحتمال الشركي </span>
             </div>
         </div>
         <div class="visualization-section" id="section-1">
@@ -261,8 +267,9 @@
             <ul>
                 <li>
                     <select class="languageSetting">
-                        <option selected>EN</option>
-                        <option data-url="index-cn.html">中文</option>
+                        <option selected>AR</option>
+                        <option data-url="index-cn.html">EN</option>
+			<option data-url="index-cn.html">中文</option>
                     </select>
                 </li>
                 <li><a href="../index.html">HOME</a></li>
