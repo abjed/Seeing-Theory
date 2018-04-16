@@ -26,6 +26,16 @@ h3 {
     font-weight: 400;
 }
 
+.inline-share:hover .inline-share-icon{ 
+    display: inline-block;
+}
+
+.inline-share-icon{
+    height: 1em; 
+    vertical-align: middle;
+    display: none;
+}
+
 
 h4 {
 
@@ -45,11 +55,33 @@ p a {
     color:#009CDE;
 }
 
-p a:hover {
 
+
+
+.blue-color{
+    color:#64bdff;
+    font-weight: 600;
 }
 
+.green-color{
+    color:#46C8B2;
+    font-weight: 600;
+}
 
+.yellow-color{
+     color:#F8CD23;
+    font-weight: 600;
+}
+
+.orange-color{
+     color:#FF8B22;
+     font-weight: 600;
+}
+
+.purple-color{
+     color:#D90677;
+     font-weight: 600;
+}
 
 
 
@@ -78,9 +110,10 @@ li {
 }
 
 .language-setting select {
-    width: 50px;
+    padding-right: 20px;
+    width: auto;
     border: none;
-    background: url(../img/languageSettingArrow.svg) no-repeat right;
+    background: url(../img/button/languageSettingArrow.svg) no-repeat right;
     font-size: 16px;
     font-family: 'Assistant';
     text-align: right;
@@ -91,7 +124,7 @@ li {
 
 
 select{
-  background: url(../img/languageSettingArrow.svg) no-repeat right;
+  background: url(../img/button/languageSettingArrow.svg) no-repeat right;
   -webkit-appearance: none !important;
       -moz-appearance: none;
       appearance: none;
@@ -545,7 +578,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 input[type=number]:hover::-webkit-inner-spin-button { 
-    background: transparent url(../img/range-number-arrow.svg) no-repeat 50% 50%;  
+    background: transparent url(../img/button/range-number-arrow.svg) no-repeat 50% 50%;  
     width: 14px;
     height: 14px;
     padding: 4px;
@@ -1165,10 +1198,7 @@ th, td{
 
     }
 
-     .form-check {
-      /*  display: block;*/
-
-    }
+     
 
 
 
@@ -1204,10 +1234,10 @@ th, td{
 
 
      .radio-inline .checkmark:after {
-        top: 4px;
+     /*   top: 4px;
         left:4px;
         width: 7px;
-        height: 7px;
+        height: 7px;*/
    
     }
 
@@ -1219,6 +1249,10 @@ th, td{
         font-size: 0.7em;
         padding: 0.8em 1em;
         margin:4% 2%;
+    }
+
+    h3{
+        font-size: 24px;
     }
 
     
@@ -1276,6 +1310,7 @@ th, td{
         font-size: 18px;
         padding-left: 10%;
         display: inline-block;
+        vertical-align: middle;
     }
 
     .nav-unit-wrapper{
@@ -1626,7 +1661,7 @@ body {
 
     padding:1% 2%;
     /*margin-left: 10%;*/
-    margin-top:-8em;
+    margin-top:-5em;
 
 
     z-index: 2000;

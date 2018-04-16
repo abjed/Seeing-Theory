@@ -91,11 +91,15 @@
                     <p>This chapter is an introduction to the basic concepts of probability theory.
                     </p>
                 </div>
-                <div class="scroll-down"> <img src="../img/bottom-arrow.svg"></div>
+                <div class="scroll-down"> <img src="../img/button/bottom-arrow.svg"></div>
             </div>
             <div id="section1">
                 <div class="unit">
-                    <h3>Chance Events</h3>
+                    
+                        <h3 >Chance Events </h3>
+                        
+ 
+                    
                     <p>Randomness is all around us. Probability theory is the mathematical framework that allows us to analyze chance events in a logically sound manner. The probability of an event is a number indicating how likely that event will occur. This number is always between 0 and 1, where 0 indicates impossibility and 1 indicates certainty.</p> 
                     <p>A classic example of a probabilistic experiment is a fair coin toss, in which the two possible outcomes are heads or tails. In this case, the probability of flipping a head or a tail is 1/2. In an actual series of coin tosses, we may get more or less than exactly 50% heads. But as the number of flips increases, the long-run frequency of heads is bound to get closer and closer to 50%.</p>
                     <div class="interactive-wrapper">
@@ -107,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <p> For an unfair or weighted coin, the two outcomes are not equally likely. You can change the weight or distribution of the coin by dragging the true probability bars (on the right in blue) up or down. If we assign numbers to the outcomes — say, 1 for heads, 0 for tails — then we have created the mathematical object known as a <a href="../probability-distributions/index.html#section1">random variable</a>.</p>
+                    <p> For an unfair or weighted coin, the two outcomes are not equally likely. You can change the weight or distribution of the coin by dragging the true probability bars (on the right in <span class="blue-color">blue</span>) up or down. If we assign numbers to the outcomes — say, 1 for heads, 0 for tails — then we have created the mathematical object known as a <a href="../probability-distributions/index.html#section1">random variable</a>.</p>
                 </div>
             </div>
             <div id="section2">
@@ -124,7 +128,7 @@
                             <div class="button-1" id="rollHundred">Roll 100 times</div>
                         </div>
                     </div></div>
-                    <p><span style="font-weight: 600;">Change</span> the distribution of the different faces of the die (thus making the die biased or "unfair") by adjusting the blue bars below and observe how this changes the expectation.</p>
+                    <p>Change the distribution of the different faces of the die (thus making the die biased or "unfair") by adjusting the <span class="blue-color">blue</span> bars below and observe how this changes the expectation.</p>
                     <div id="barDie"></div>
                 </div>
             </div>
@@ -133,7 +137,7 @@
                     <h3>Variance</h3>
                     <p>Whereas expectation provides a measure of centrality, the variance of a random variable quantifies the spread of that random variable's distribution. The variance is the average value of the squared difference between the random variable and its expectation,</p>
                     <span id="left-mathjax">$$\text{Var}(X) = \text{E}[(X - \text{E}[X])^2]$$</span>
-                    <p>Draw cards randomly from a deck of ten cards. As you continue drawing cards, observe that the running average of squared differences (in green) begins to resemble the true variance (in blue).</p>
+                    <p>Draw cards randomly from a deck of ten cards. As you continue drawing cards, observe that the running average of squared differences (in <span class="green-color">green</span>) begins to resemble the true variance (in <span class="blue-color">blue</span>).</p>
                     <div class="interactive-wrapper">
                         <div id="cardWrapper">
                             <div id="card"></div>
@@ -178,8 +182,9 @@
                 </a>
                 <a id="share-button" >
 
-                    <li><i class="fa fa-share-square-o action-icon" aria-hidden="true"></i>Share</li>
-                    <li><div id="share"></div></li>
+                    <li class="inline-share">
+                        <i class="fa fa-share-square-o action-icon" aria-hidden="true"></i>Share
+                    </li>
                     <li><div id="share-modal"></div></li>
 
                 </a>
@@ -198,9 +203,9 @@
     <div class="col-right">
         <div class='language-setting'>
             <select class="languageSetting">
-                <option selected>EN</option>
-                <option data-url="index-ar.html">AR</option>
-                <option data-url="index-cn.html">中文</option>
+                <option selected>English</option>
+                <option data-url="cn.html">中文</option>
+		<option data-url="index-ar.html">AR</option>
             </select>
         </div>
         <div class="nav-section" id="section-0">
@@ -233,8 +238,8 @@
             <ul>
                 <li>
                     <select class="languageSetting">
-                        <option selected>EN</option>
-                        <option data-url="index-cn.html">中文</option>
+                        <option selected>English</option>
+                        <option data-url="cn.html">中文</option>
                     </select>
                 </li>
                 <li><a href="../index.html">HOME</a></li>
@@ -340,17 +345,33 @@
             </div>
         </div>
     </div>
+
+    <div id="share"></div>
     <!-- Share CSS and JavaScript -->
     <link rel="stylesheet" type="text/css" href="../css/jssocials.css" />
     <link rel="stylesheet" type="text/css" href="../css/jssocials-theme-flat.css" />
     <script src="../js/jssocials.min.js"></script>
     <script>
+       
+
         $("#share").jsSocials({
+            // url: "_url_",
+            // _createShareLink: function(share) {
+            //     var $result = jsSocials.Socials.prototype._createShareLink.apply(this, arguments);
+            //     $result.on("click", function() {
+            //           // replace the your placeholder with actual url
+            //           var href = $result.attr("href");
+            //           $result.attr("href", href.replace("_url_", shareUrl));
+            //     });
+            //     return $result;
+            // },
             showLabel: false,
             showCount: false,
             shareIn: "popup",
             shares: ["email", "twitter", "facebook", "googleplus", "linkedin"]
         });
+
+        
 
         $(".languageSetting").change(function() {
           var option = $(this).find('option:selected');

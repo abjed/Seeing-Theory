@@ -27,7 +27,7 @@
    
 
     <!-- Home Page CSS -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
 
     <!-- Full Page CSS -->
     <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
@@ -74,7 +74,6 @@
 
     </div>
     <div class="menu-bottom">
-
         <ul id="menu">
             <li data-menuanchor="firstPage" class="active" id='home'><a href="#firstPage">Home</a></li>
             <li data-menuanchor="secondPage" id="chapter-menu"><a href="#secondPage">Chapters</a></li>
@@ -82,14 +81,13 @@
             <li data-menuanchor="4thPage"><a href="#4thPage">Book</a> </li>
             <li id="language-menu" style="margin-right: 0;">
                 <div class='language-setting'>
-            <select id="languageSetting">
-                <option selected>EN</option>
-                <option data-url="index-ar.html">AR</option>
-            </select>
+            	<select class="languageSetting">
+                	<option selected>English</option>
+                	<option data-url="cn.html">中文</option>
+                	<option data-url="index-ar.html">AR</option>
+            	</select>
         </div></li>
-
         </ul>
-
     </div>
     <div class="content" id="fullpage">
         <div class="section " id="section0 ">
@@ -104,7 +102,7 @@
 
 
                 </div>
-                <a href="#secondPage" data-menuanchor="secondPage"><div class="scroll-down"> <img src="img/bottom-arrow.svg"></div></a>
+                <a href="#secondPage" data-menuanchor="secondPage"><div class="scroll-down"> <img src="img/button/bottom-arrow.svg"></div></a>
             </div>
         </div>
         <div class="section" id="section1">
@@ -350,25 +348,25 @@
 
                     <div class="team">
                         <a href="http://daniel-kunin.com/">
-                        	<img src="img/daniel.png">
+                        	<img src="img/team/daniel.png">
                             <p>Daniel</br> Kunin</p>
                         </a>
                     </div>
                     <div class="team">
                         <a href="http://www.jingru-guo.com">
-                        	<img src="img/jingru.png">
+                        	<img src="img/team/jingru.png">
                             <p>Jingru</br>Guo</p>
                         </a>
                     </div>
                     <div class="team">
                         <a href="https://www.linkedin.com/in/tyler-dae-devlin/">
-                        	<img src="img/tyler.png">
+                        	<img src="img/team/tyler.png">
                             <p>Tyler</br> Dae Devlin</p>
                         </a>
                     </div>
                     <div class="team">
                         <a href="https://math.stackexchange.com/users/303759/daniel-xiang">
-                        	<img src="img/dan-xiang.jpg">
+                        	<img src="img/team/dan-xiang.jpg">
                             <p>Daniel</br> Xiang</p>
                         </a>
                     </div>
@@ -378,30 +376,29 @@
                     <p>Awards & Press</p>
 
                     <a href="https://www.informationisbeautifulawards.com/showcase/2296-seeing-theory">
-                        <img src="img/iib-w.svg" class='award'>
+                        <img src="img/award/iib.svg" class='award'>
                     </a>
                     <a href="https://www.commarts.com/project/26039/seeing-theory">
-                        <img src="img/ca.svg" class='award'>
+                        <img src="img/award/ca.svg" class='award'>
                     </a>
                     <a href="https://cs.brown.edu/about/conduit/conduit_v27.pdf#page=14">
-                        <img src="img/brown-w.svg" class='award'>
+                        <img src="img/award/brown.svg" class='award'>
                     </a>
                     <a href="https://www.fastcodesign.com/3068795/a-visual-guide-to-statistics">
-                        <img src="img/fastco-w.svg" class='award'>
+                        <img src="img/award/fastco.svg" class='award'>
                     </a>
                     <a href="http://capeandislands.org/post/websites-will-make-you-fall-love-statistics#stream/0">
-                        <img src="img/wcai-w.svg" class='award'>
+                        <img src="img/award/wcai.svg" class='award'>
                     </a>
                     <a href="https://thenextweb.com/apps/2017/03/01/interactive-webiste-statistics-boring/">
-                        <img src="img/tnw.svg" class='award'>
+                        <img src="img/award/tnw.svg" class='award'>
                     </a>
                     <a href="https://www.sxsw.com/awards/interactive-innovation-awards/">
-                        <img src="img/sxsw.svg" class='award'>
+                        <img src="img/award/sxsw.svg" class='award'>
                     </a>
                     <a href="http://www.browndailyherald.com/2018/02/08/brown-risd-grads-craft-online-statistics-resource/">
-                        <img src="img/bdh.png" class='award'>
+                        <img src="img/award/bdh.png" class='award'>
                     </a>
-                    
                 </div>
             </div>
         </div>
@@ -414,14 +411,11 @@
 
                     <div class="book">
                         <a href="./doc/seeing-theory.pdf">
-                        	<img src="img/book-pdf.png">
+                        	<img src="img/button/book.png">
                             <div class="round-button">download</div>
                         </a>
                     </div>
-                   <!--  <div class="book">
-                        <img src="img/book-print.png">
-                        <div class="round-button-x">available soon</div>
-                    </div> -->
+
                 </div>
 
                 <div id="social">
@@ -452,8 +446,8 @@
     <!-- D3 -->
     <script src="./js/d3.min.js"></script>
 
-    <!-- Ball JavaScript -->
-    <script src="./js/balls.js"></script>
+    <!-- Home JavaScript -->
+    <script src="./js/home.js"></script>
 
     <!-- Google Analytics -->
     <script>
@@ -464,6 +458,12 @@
 
       ga('create', 'UA-85617614-1', 'auto');
       ga('send', 'pageview');
+
+
+$(".languageSetting").change(function() {
+  var option = $(this).find('option:selected');
+  window.location.href = option.data("url");
+});
 
     </script>
 

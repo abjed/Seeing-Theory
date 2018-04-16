@@ -160,7 +160,7 @@ var chapter_name = true;
 var end_url = langDetect();
 var chapterlist = new Array("bp", "cp", "pd", "fi", "bi", "ra");
 var chapter_list = new Array("basic-probability", "compound-probability", "probability-distributions", "frequentist-inference", "bayesian-inference", "regression-analysis");
-
+var shareUrl = window.location.href;
 
 window.onload = function() {
 
@@ -173,6 +173,7 @@ window.onload = function() {
     modalTitleOnLoad();
     chapterBackgroundColorChange();
     shareButtonToggle();
+    inlineShare();
 
 
 
@@ -383,7 +384,6 @@ function scrollTo() {
         parent_id = $(this).parent().attr('id');
         current_page = $(this).parent().attr('class');
 
-
         if (current_page) {
             closeNav();
             var num = $(this).attr('class').slice(-1);
@@ -572,10 +572,6 @@ function enableScroll() {
 }
 
 function shareButtonToggle() {
-    $('#share-button').click(function() {
-        $('#share').slideToggle();
-        $('#share-modal').toggle();
-    })
 
     $('#share-modal').click(function() {
         $('#share').slideToggle();
@@ -590,7 +586,7 @@ function langDetect() {
     var current_url;
 
     if (a != "en") {
-        current_url = "index-" + a + ".html";
+        current_url =  a + ".html";
     } else {
         current_url = "index.html"
     }
@@ -602,3 +598,29 @@ function langDetect() {
 function getCurrentChapter() {
     return $('meta[name=chapter]').attr("content");
 }
+
+function inlineShare(){
+    $(".inline-share").on("click", function() {
+        $('#share').slideToggle();
+        $('#share-modal').toggle();
+        var left_pos = $(this).offset().left;
+        var top_pos = $(this).offset().top;
+
+        // var section = $(this).parent().parent().attr('id');
+        // console.log(section);
+       
+
+        // if(section){
+        //     if(shareUrl.slice(-1)=="l"){
+        //         shareUrl = shareUrl+"#"+section;
+        //     }
+        // }
+       
+        $("#share").css({top: top_pos, left: left_pos, position:'absolute'});
+    })
+
+    
+}
+
+
+
